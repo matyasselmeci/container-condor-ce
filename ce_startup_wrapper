@@ -1,0 +1,2 @@
+#!/bin/sh
+osg-configure -c && exec /usr/share/condor-ce/condor_ce_startup
