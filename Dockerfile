@@ -21,4 +21,7 @@ COPY ce_startup_wrapper /usr/bin/ce_startup_wrapper
 
 RUN adduser osg
 
+RUN mkir -p /etc/osg/config.d/
+RUN mkir -p /etc/gratia/htcondor-ce/
+
 ENTRYPOINT /usr/bin/supervisord -c /etc/supervisord.conf
