@@ -22,6 +22,8 @@ COPY ce_startup_wrapper /usr/bin/ce_startup_wrapper
 RUN adduser osg
 
 RUN mkdir -p /etc/osg/config.d/
+RUN touch /etc/osg/config.d/99-local.ini
 RUN mkdir -p /etc/gratia/htcondor-ce/
+RUN mkdir -p /home/osg/.ssh
 
 ENTRYPOINT /usr/bin/supervisord -c /etc/supervisord.conf

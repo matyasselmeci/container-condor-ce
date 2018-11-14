@@ -1,2 +1,6 @@
 #!/bin/sh
+cat /tmp/access-key >> /home/osg/.ssh/authorized_keys
+chown osg:osg /home/osg/.ssh/authorized_keys
+chmod 0600 /home/osg/.ssh/authorized_keys
+cp /tmp/ProbeConfig /etc/gratia/htcondor-ce/ProbeConfig
 osg-configure -c && exec /usr/share/condor-ce/condor_ce_startup
